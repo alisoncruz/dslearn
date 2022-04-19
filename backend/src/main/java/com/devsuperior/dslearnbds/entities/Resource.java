@@ -43,12 +43,15 @@ public class Resource implements Serializable {
 	public Resource() {
 	}
 
-	public Resource(Long id, String title, String description, Integer position, String imgUri) {
+	public Resource(Long id, String title, String description, Integer position, String imgUri
+			,ResourceType type, Offer offer) {
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.position = position;
 		this.imgUri = imgUri;
+		this.type = type;
+		this.offer = offer;
 	}
 
 	public Long getId() {
@@ -93,6 +96,22 @@ public class Resource implements Serializable {
 	
 	public List<Section> getSections() {
 		return sections;
+	}
+	
+	public void setType(ResourceType type) {
+		this.type = type;
+	}
+	
+	public ResourceType getType() {
+		return type;
+	}
+	
+	public void setOffer(Offer offer) {
+		this.offer = offer;
+	}
+	
+	public Offer getOffer() {
+		return offer;
 	}
 
 	@Override
