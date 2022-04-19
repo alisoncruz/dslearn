@@ -26,3 +26,5 @@ INSERT INTO tb_section (title, description, position, img_uri,resource_id,prereq
 INSERT INTO tb_section (title, description, position, img_uri,resource_id,prerequisite_id) VALUES ('Capítulo 2','Neste capítulo vamos começar',2,'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.hfPS1kCAGAFFcE-tlmpWMgHaDt%26pid%3DApi&f=1',1,1);
 INSERT INTO tb_section (title, description, position, img_uri,resource_id,prerequisite_id) VALUES ('Capítulo 3','Neste capítulo vamos começar',3,'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.hfPS1kCAGAFFcE-tlmpWMgHaDt%26pid%3DApi&f=1',1,2);
 
+INSERT INTO tb_enrollment(user_id, offer_id, enroll_moment,refund_moment, available, only_update) VALUES(1,1,TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',null,true,false);
+INSERT INTO tb_enrollment(user_id, offer_id, enroll_moment,refund_moment, available, only_update) VALUES(2,1,TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z',null,true,false);
