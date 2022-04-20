@@ -62,3 +62,5 @@ INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Tente reinicia
 INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Deu certo, valeu!', TIMESTAMP WITH TIME ZONE '2020-12-20T13:00:00Z', 1, 1);
 
 INSERT INTO tb_reply_likes (reply_id, user_id) VALUES (1, 1);
+
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/devsuperior/bds-dslearn', TIMESTAMP WITH TIME ZONE '2020-12-10T10:00:00Z', 0, null, null, 4, 1, 1);
