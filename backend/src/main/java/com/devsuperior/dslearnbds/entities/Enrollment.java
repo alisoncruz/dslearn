@@ -2,10 +2,15 @@ package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
@@ -29,6 +34,9 @@ public class Enrollment implements Serializable {
 	private Instant refundMoment;
 	private boolean available; 
 	private boolean onlyUpdate;
+	
+	@ManyToMany(mappedBy = "enrollmentsDone")
+	private Set<Lesson> lessonsDone = new HashSet<>();
 	
 	public Enrollment() {}
 
@@ -89,6 +97,10 @@ public class Enrollment implements Serializable {
 
 	public void setOnlyUpdate(boolean onlyUpdate) {
 		this.onlyUpdate = onlyUpdate;
+	}
+	
+	public Set<Lesson> getLessonsDone() {
+		return lessonsDone;
 	}
 
 	@Override
