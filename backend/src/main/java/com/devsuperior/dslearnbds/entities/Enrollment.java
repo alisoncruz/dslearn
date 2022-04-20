@@ -106,6 +106,10 @@ public class Enrollment implements Serializable {
 	public Set<Lesson> getLessonsDone() {
 		return lessonsDone;
 	}
+	
+	public List<Deliver> getDeliveries() {
+		return deliveries;
+	}
 
 	@Override
 	public int hashCode() {
